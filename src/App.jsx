@@ -1,4 +1,5 @@
 import { useState } from "react"
+import ProfileCard from "./components/ProfileCard"
 
 function App() {
 
@@ -45,13 +46,10 @@ function App() {
       </div>
 
       {
-        userData && (
-          <div className="text-white mt-6">
-            <h2>{userData.name}</h2>
-            <p>{userData.bio}</p>
-          </div>
-        )
-      }
+  userData && (
+    <ProfileCard userData={userData} />
+  )
+}
 
     </div>
   )
